@@ -203,9 +203,7 @@ enum coloringplus {
     //% block="⬛"
     black = 0,
     //% block="⬜"
-    white = 1,
-    //% block="null"
-    nill = 2
+    white = 1
 }
 
 //% blockHidden=true
@@ -318,7 +316,6 @@ namespace Display {
     export function lin(x1: number, y1: number, x2: number, y2: number, boja: coloringplus): void {
         let a;
         switch (boja) {
-            case (2): a = null;
             case (1): a = "W"; break;
             case (0): a = "B"; break;
         }

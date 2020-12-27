@@ -394,19 +394,6 @@ namespace Display {
         ispis(tekst + ";" + x.toString() + ";" + y.toString()+ ";" + s.toString() + ";" + a);
     }
 
-    //% weight=202 color=#f87820
-    //% blockId=bristxtpoz
-    //% block="DELETE: text from %tekst letters on col x %x and row y %y"
-    //% inlineInputMode=inline
-    export function bristxtpoz(tekst: string, x: nuladeset, y: nulapet): void {
-        let ispuna = [];
-        for (let i = 0; i < tekst.length; i++) {
-            ispuna.push(" ");
-        }
-        let celo = ispuna.join("");
-        ispis(celo + ";" + x.toString() + ";" + y.toString() + ";B");
-    }
-
     //% weight=200 color=#f87820
     //% blockId=ispunaekrana
     //% block="PAINT display: color %boja"

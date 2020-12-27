@@ -860,7 +860,6 @@ namespace Display {
             case (1): a = "+"; break;
             case (0): a = "-"; break;
         }
-
         ispis("JMP;" + x.toString() + ";" + a + ";" + y.toString());
     }
 
@@ -890,7 +889,7 @@ namespace Display {
         return pit.getNumber(NumberFormat.Int8LE, 0);       
     } 
 
-     //% weight=14 color=f34a2d
+    //% weight=14 color=f34a2d
     //% blockId=get_score
     //% block="GAME: get score"
     export function get_score(){
@@ -899,7 +898,7 @@ namespace Display {
         return pit.getNumber(NumberFormat.Int8LE, 0);       
     } 
     
-     //% weight=13 color=f34a2d
+    //% weight=13 color=f34a2d
     //% blockId=score
     //% block="GAME: Point scored"
     export function score(){
@@ -907,6 +906,7 @@ namespace Display {
             return true;
         } else { return false; }
     }
+    
     //% weight=12 color=f34a2d
     //% blockId=dead
     //% block="GAME: Player dead"
@@ -915,6 +915,7 @@ namespace Display {
             return true;
         } else { return false; }
     }
+    
     //% weight=10 color=f34a2d
     //% blockId=alive
     //% block="GAME: Player fall"
@@ -923,5 +924,4 @@ namespace Display {
             return true;
         } else { return false; }
     } 
-    
 }

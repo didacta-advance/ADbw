@@ -880,8 +880,17 @@ namespace Display {
         trazi();
         return pit.getNumber(NumberFormat.Int8LE, 0);       
     }
+   
+    //% weight=15 color=f34a2d
+    //% blockId=posy
+    //% block="GAME: get player position (y)"
+    export function posy(){
+        ispis("GET;Y");
+        trazi();
+        return pit.getNumber(NumberFormat.Int8LE, 0);       
+    } 
 
-    //% weight=16 color=f34a2d
+     //% weight=14 color=f34a2d
     //% blockId=get_score
     //% block="GAME: get score"
     export function get_score(){
@@ -890,15 +899,7 @@ namespace Display {
         return pit.getNumber(NumberFormat.Int8LE, 0);       
     } 
     
-    //% weight=15 color=f34a2d
-    //% blockId=posy
-    //% block="GAME: get player position (y)"
-    export function posy(){
-        ispis("GET;Y");
-        trazi();
-        return pit.getNumber(NumberFormat.Int8LE, 0);       
-    }   
-  //% weight=14 color=f34a2d
+     //% weight=13 color=f34a2d
     //% blockId=score
     //% block="GAME: Point scored"
     export function score(){

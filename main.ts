@@ -601,31 +601,7 @@ namespace Display {
             }
         }
     }
-    //% weight=66
-    //% blockId=score
-    //% block="GAME: Point scored"
-    export function score(){
-        if (pit.getNumber(NumberFormat.Int8LE, 0) == 2){
-            return true;
-        } else { return false; }
-    }
-    //% weight=64
-    //% blockId=dead
-    //% block="GAME: Player dead"
-    export function dead(){
-        if (pit.getNumber(NumberFormat.Int8LE, 0) == 3){
-            return true;
-        } else { return false; }
-    }
-    //% weight=62
-    //% blockId=alive
-    //% block="GAME: Player fall"
-    export function fall(){
-        if (pit.getNumber(NumberFormat.Int8LE, 0) == 4){
-            return true;
-        } else { return false; }
-    }
-
+  
     //% weight=60
     //% blockId=zvuk
     //% block="GAME: all sounds"
@@ -660,15 +636,6 @@ namespace Display {
         }catch(err){
             console.log(err);
         }
-    }
-
-    //% weight=55
-    //% blockId=get_score
-    //% block="GAME: get score"
-    export function get_score(){
-        ispis("GET;P");
-        trazi();
-        return pit.getNumber(NumberFormat.Int8LE, 0);       
     }
 
     export let saljiDelay : number = duz2.dva;
@@ -905,7 +872,7 @@ namespace Display {
         ispis("DEL");
     }
 
-    //% weight=17
+    //% weight=17  color=f34a2d
     //% blockId=posx
     //% block="GAME: get player position (x)"
     export function posx(){
@@ -914,7 +881,7 @@ namespace Display {
         return pit.getNumber(NumberFormat.Int8LE, 0);       
     }
 
-    //% weight=16
+    //% weight=16 color=f34a2d
     //% blockId=posy
     //% block="GAME: get player position (y)"
     export function posy(){
@@ -922,5 +889,37 @@ namespace Display {
         trazi();
         return pit.getNumber(NumberFormat.Int8LE, 0);       
     }   
-
+  //% weight=14 color=f34a2d
+    //% blockId=score
+    //% block="GAME: Point scored"
+    export function score(){
+        if (pit.getNumber(NumberFormat.Int8LE, 0) == 2){
+            return true;
+        } else { return false; }
+    }
+    //% weight=12 color=f34a2d
+    //% blockId=dead
+    //% block="GAME: Player dead"
+    export function dead(){
+        if (pit.getNumber(NumberFormat.Int8LE, 0) == 3){
+            return true;
+        } else { return false; }
+    }
+    //% weight=10 color=f34a2d
+    //% blockId=alive
+    //% block="GAME: Player fall"
+    export function fall(){
+        if (pit.getNumber(NumberFormat.Int8LE, 0) == 4){
+            return true;
+        } else { return false; }
+    }
+    //% weight=8 color=f34a2d
+    //% blockId=get_score
+    //% block="GAME: get score"
+    export function get_score(){
+        ispis("GET;P");
+        trazi();
+        return pit.getNumber(NumberFormat.Int8LE, 0);       
+    }    
+    
 }

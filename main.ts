@@ -288,13 +288,6 @@ namespace Display {
         ispis("CON;" + oc.toString());
     }
 
-    //% weight=216 color=#f87820
-    //% blockId=isbuf
-    //% block="SHOW: buffer"
-    export function isbuf(): void {
-        ispis("BUF");
-    }
-
     //% weight=214  color=#f87820
     //% blockId=zvuksignal
     //% block="SOUND: frequency %freq (0-255) and length %time (mil.sec. 0-1000)"
@@ -380,6 +373,13 @@ namespace Display {
         ispis(tekst + ";" + x.toString() + ";" + y.toString()+ ";" + s.toString() + ";" + a + ";G");
     }
 
+    //% weight=205 color=#f87820
+    //% blockId=isbuf
+    //% block="SHOW: buffer"
+    export function isbuf(): void {
+        ispis("BUF");
+    }    
+    
     //% weight=204 color=#f87820
     //% blockId=ispistxt
     //% block="TEXT: %tekst - on col x(0-13) %x, row y(0-5) %y size (0-3) %s color %boja"

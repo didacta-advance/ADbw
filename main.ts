@@ -882,6 +882,15 @@ namespace Display {
     }
 
     //% weight=16 color=f34a2d
+    //% blockId=get_score
+    //% block="GAME: get score"
+    export function get_score(){
+        ispis("GET;P");
+        trazi();
+        return pit.getNumber(NumberFormat.Int8LE, 0);       
+    } 
+    
+    //% weight=15 color=f34a2d
     //% blockId=posy
     //% block="GAME: get player position (y)"
     export function posy(){
@@ -912,14 +921,6 @@ namespace Display {
         if (pit.getNumber(NumberFormat.Int8LE, 0) == 4){
             return true;
         } else { return false; }
-    }
-    //% weight=8 color=f34a2d
-    //% blockId=get_score
-    //% block="GAME: get score"
-    export function get_score(){
-        ispis("GET;P");
-        trazi();
-        return pit.getNumber(NumberFormat.Int8LE, 0);       
-    }    
+    } 
     
 }

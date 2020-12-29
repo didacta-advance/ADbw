@@ -196,6 +196,8 @@ enum coloring {
     black = 0,
     //% block="⬜"
     white = 1
+    //% block="null"
+    nula = 2    
 }
 
 //% blockHidden=true

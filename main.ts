@@ -325,6 +325,7 @@ namespace Display {
     export function kruz(x: number, y: number, r: number, boja: coloring, isp: coloringplus): void {
         let b;
         switch (boja) {
+            case (2): b = null; break;                
             case (1): b = "W"; break;
             case (0): b = "B"; break;
         }

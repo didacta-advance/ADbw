@@ -195,9 +195,7 @@ enum coloring {
     //% block="⬛"
     black = 0,
     //% block="⬜"
-    white = 1,
-    //% block="null"
-    nula = 2    
+    white = 1    
 }
 
 //% blockHidden=true
@@ -310,7 +308,7 @@ namespace Display {
     //% blockId=lin
     //% block="LINE: x1(0-83) %x1 y1(0-47) %y1 to x2(0-83) %x2 y2(0-47) %y2 , color %boja"
     //% inlineInputMode=inline
-    export function lin(x1: number, y1: number, x2: number, y2: number, boja: coloringplus): void {
+    export function lin(x1: number, y1: number, x2: number, y2: number, boja: coloring): void {
         let a;
         switch (boja) {
             case (1): a = "W"; break;
@@ -324,7 +322,7 @@ namespace Display {
     //% blockId=kruz
     //% block="CIRCLE: x(0-83) %x y(0-47) %y , radius %r , color %boja filled with %isp"
     //% inlineInputMode=inline
-    export function kruz(x: number, y: number, r: number, boja: coloring, isp: coloring): void {
+    export function kruz(x: number, y: number, r: number, boja: coloringplus, isp: coloringplus): void {
         let b;
         switch (boja) {
             case (2): b = null; break;                
@@ -346,7 +344,7 @@ namespace Display {
     //% blockId=kvad
     //% block="RECTANGLE: x(0-83) %x1 y(0-47) %y1, width %x2, height %y2 , color %boja filled with %isp"
     //% inlineInputMode=inline
-    export function kvad(x1: number, y1: number, x2: number, y2: number, boja: coloring, isp: coloringplus): void {
+    export function kvad(x1: number, y1: number, x2: number, y2: number, boja: coloringplus, isp: coloringplus): void {
         
         let b;
         switch (boja) {

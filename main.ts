@@ -195,7 +195,7 @@ enum coloring {
     //% block="⬛"
     black = 0,
     //% block="⬜"
-    white = 1
+    white = 1,
     //% block="null"
     nula = 2    
 }

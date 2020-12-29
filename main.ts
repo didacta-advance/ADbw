@@ -205,7 +205,9 @@ enum coloringplus {
     //% block="⬛"
     black = 0,
     //% block="⬜"
-    white = 1
+    white = 1,
+    //% block="null"
+    nula = 2    
 }
 
 //% blockHidden=true
@@ -322,7 +324,7 @@ namespace Display {
     //% blockId=kruz
     //% block="CIRCLE: x(0-83) %x y(0-47) %y , radius %r , color %boja filled with %isp"
     //% inlineInputMode=inline
-    export function kruz(x: number, y: number, r: number, boja: coloring, isp: coloringplus): void {
+    export function kruz(x: number, y: number, r: number, boja: coloring, isp: coloring): void {
         let b;
         switch (boja) {
             case (2): b = null; break;                
@@ -348,6 +350,7 @@ namespace Display {
         
         let b;
         switch (boja) {
+            case (2): b = null; break;                 
             case (1): b = "W"; break;
             case (0): b = "B"; break;
         }

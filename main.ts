@@ -538,7 +538,7 @@ namespace Display {
     
     //% weight=102 color=#323131
     //% blockId=isbit8x8
-    //% block="BITMAP: (1-9) %n x (0-83) %x , y(0-47) %y color %boja"
+    //% block="DRAW BITMAP: (1-9) %n x (0-83) %x , y(0-47) %y color %boja"
     //% inlineInputMode=inline
     export function isbit8x8(n: bitmapIndex, x: number, y: number, boja: coloring): void {
         let a;

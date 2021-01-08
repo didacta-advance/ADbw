@@ -406,22 +406,8 @@ namespace Display {
     }
 
 //******************************* scroll */
-
+    
     //% weight=120 color=#05b115
-    //% blockId=scup
-    //% block="SCROLL: UP for %n pixel"
-    export function scup(n: number): void {
-        ispis("SBU;" + n.toString());
-    }
-
-    //% weight=118 color=#05b115
-    //% blockId=scdown
-    //% block="SCROLL: DOWN for %n pixel"
-    export function scdown(n: number): void {
-        ispis("SBD;" + n.toString());
-    }
-
-    //% weight=116 color=#05b115
     //% blockId=sctxtup
     //% block="SCROLL: text UP for 1 row - loop %r"
     export function sctxtup(r: yn): void {
@@ -433,7 +419,7 @@ namespace Display {
         ispis("SCU;" + a);
     }
 
-    //% weight=114 color=#05b115
+    //% weight=118 color=#05b115
     //% blockId=sctxtdown
     //% block="SCROLL: text DOWN for 1 row - loop %r"
     export function sctxtdown(r: yn): void {
@@ -443,11 +429,25 @@ namespace Display {
         case (0): a = null; break;
         }
         ispis("SCD;" + a);
+    }    
+
+    //% weight=116 color=#05b115
+    //% blockId=scup
+    //% block="SCROLL: UP for %n pixel"
+    export function scup(n: number): void {
+        ispis("SBU;" + n.toString());
+    }
+
+    //% weight=114 color=#05b115
+    //% blockId=scdown
+    //% block="SCROLL: DOWN for %n pixel"
+    export function scdown(n: number): void {
+        ispis("SBD;" + n.toString());
     }
 
     //% weight=112 color=#05b115
     //% blockId=bitscrolltxt
-    //% block="SCROLL: horizontal - BIT: from %str, from row %x to row %y with loop %nn"
+    //% block="SCROLL: horizontal - BIT: from %str, from row (0-5) %x to row (0-5) %y with loop %nn"
     //% inlineInputMode=inline
     export function bitscrolltxt(str: lr, x: number, y: number, nn: yn): void {
         let b;

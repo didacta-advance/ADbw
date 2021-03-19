@@ -611,11 +611,11 @@ namespace Display {
     //% ledof="on"
     export function zvuk(){
         if (pit.getNumber(NumberFormat.Int8LE, 0) == 2){
-            ispis("LED;G;20");
             music.playTone(1500, 50);
+            ispis("LED;G;20");            
         } else if (pit.getNumber(NumberFormat.Int8LE, 0) == 3){
-            ispis("LED;R;20");
             music.playTone(800, 100);
+            ispis("LED;R;20");            
         } else if (pit.getNumber(NumberFormat.Int8LE, 0) == 4){
             for(let i=900; i<1200; i+=30){
                 music.playTone(i, 8);

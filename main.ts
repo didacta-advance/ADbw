@@ -3,7 +3,7 @@
 
 // })
 
-declare var ledof: = "on"
+declare var ledonoff: = "on"
 //basic.pause(1500);
 function ispis(tekst: string) {
     let dd = tekst.length

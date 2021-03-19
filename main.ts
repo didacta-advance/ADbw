@@ -611,11 +611,11 @@ namespace Display {
     //% ledof="on"
     export function zvuk(){
         if (pit.getNumber(NumberFormat.Int8LE, 0) == 2){
+            ispis("LED;G;10");             
             music.playTone(1500, 50);
-            ispis("LED;G;20");            
         } else if (pit.getNumber(NumberFormat.Int8LE, 0) == 3){
-            music.playTone(800, 100);
-            ispis("LED;R;20");            
+            ispis("LED;R;10");            
+            music.playTone(800, 100);           
         } else if (pit.getNumber(NumberFormat.Int8LE, 0) == 4){
             for(let i=900; i<1200; i+=30){
                 music.playTone(i, 8);
@@ -710,9 +710,15 @@ namespace Display {
 
     //% weight=46
     //% blockId=pozobj
-    //% block="OBJECT: screen : %bre , bitmap  %brm , x(0-9) %x  y(0-5) %y length %d (1-10) hor/ver %s (0/1)"
+    //% block="OBJECT: screen (1-5): %bre , bitmap  %brm , x(0-9) %x  y(0-5) %y length %d (1-10) hor/ver %s (0/1)"
     //% inlineInputMode=inline
-    export function pozobj(bre: number, brm: bitmapIndex, x: number, y: number, d: number, s: number){              
+    export function pozobj(bre: number, brm: bitmapIndex, x: number, y: number, d: number, s: number){ 
+        if (bre == 0) {bre = 1;}
+        if (bre > 5) {bre = 5;}
+        if (x > 9) {x = 9;}
+        if (y > 5) {y = 5;}
+        if (d > 11) {d = 11;}
+        if (s > 1) {s = 1;}
         ispis("OBJ;" + bre.toString() + ";" + brm.toString() + ";" + x.toString() + ";" + y.toString() + ";" + d.toString() + ";" + s.toString());
     }
 
@@ -722,6 +728,7 @@ namespace Display {
     //% block="SHOW SCREEN %bre"
     //% inlineInputMode=inline
     export function prikazobj(bre: number){
+        if (bre > 5) {bre = 5;}
         ispis("FX;" + bre.toString());
     }
 

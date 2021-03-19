@@ -254,7 +254,7 @@ namespace Display {
     let pit = pins.createBuffer(1);
     pit.setNumber(NumberFormat.Int8LE, 0, 1); // ?
 
-// STANDARDNE FUNKCIJE ****************************************************
+//************************STANDARDNE FUNKCIJE ****************************/ 
 
     //% weight=222  color=#f87820    
     //% blockId=rest

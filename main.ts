@@ -2,7 +2,7 @@
 
 // })
 
-//basic.pause(1500);
+basic.pause(2000);
 function ispis(tekst: string) {
     let dd = tekst.length
     if (dd < 31) {

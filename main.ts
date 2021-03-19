@@ -1,9 +1,7 @@
-/** 19.03.2021 */
 // input.onButtonPressed(Button.A, function () {
 
 // })
 
-declare var ledonoff: = "on"
 //basic.pause(1500);
 function ispis(tekst: string) {
     let dd = tekst.length
@@ -613,10 +611,10 @@ namespace Display {
     //% ledof="on"
     export function zvuk(){
         if (pit.getNumber(NumberFormat.Int8LE, 0) == 2){
-            if (ledof == "on") {ispis("LED;G;20");}
+            ispis("LED;G;20");
             music.playTone(1500, 50);
         } else if (pit.getNumber(NumberFormat.Int8LE, 0) == 3){
-            if (ledof == "on") {ispis("LED;R;20");}
+            ispis("LED;R;20");
             music.playTone(800, 100);
         } else if (pit.getNumber(NumberFormat.Int8LE, 0) == 4){
             for(let i=900; i<1200; i+=30){

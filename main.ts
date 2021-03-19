@@ -610,6 +610,7 @@ namespace Display {
     //% weight=60
     //% blockId=zvuk
     //% block="GAME: all sounds"
+    //% ledof="on"
     export function zvuk(){
         if (pit.getNumber(NumberFormat.Int8LE, 0) == 2){
             if (ledof == "on") {ispis("LED;G;20");}

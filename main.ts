@@ -1,8 +1,9 @@
+/** 19.03.2021 */
 // input.onButtonPressed(Button.A, function () {
 
 // })
 
-
+declare var ledof: = "off"
 //basic.pause(1500);
 function ispis(tekst: string) {
     let dd = tekst.length

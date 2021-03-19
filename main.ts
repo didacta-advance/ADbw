@@ -779,10 +779,10 @@ namespace Display {
 
     //% weight=34
     //% blockId=brziv
-    //% block="LIVES at start %zbod (0-255)"
+    //% block="LIVES at start %zbod (0-99)"
     //% inlineInputMode=inline
     export function brziv(zbod: number){
-        if(zbod > 255){zbod = 255;}
+        if(zbod > 99){zbod = 99;}
         if(zbod < 0){zbod = 0;}
 
         ispis("LIV;" + zbod.toString());

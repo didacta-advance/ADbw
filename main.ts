@@ -901,7 +901,7 @@ namespace Display {
         trazi();
         return pit.getNumber(NumberFormat.Int8LE, 0);       
     } 
-
+/** EXCLUDED
     //% weight=14 color=f34a2d
     //% blockId=get_score
     //% block="GAME: get score"
@@ -936,5 +936,5 @@ namespace Display {
         if (pit.getNumber(NumberFormat.Int8LE, 0) == 4){
             return true;
         } else { return false; }
-    } 
+    } */
 }

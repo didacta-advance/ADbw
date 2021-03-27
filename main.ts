@@ -32,11 +32,11 @@ enum duz2{
     //% block="6"
     dva = 6,    
     //% block="8"
-    tri = 8
+    tri = 8,
     //% block="10"
-    cet = 10
+    cet = 10,
     //% block="12"
-    pet = 12
+    pet = 12,
     //% block="15"
     ses = 15    
 }

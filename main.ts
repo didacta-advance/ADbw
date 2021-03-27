@@ -33,6 +33,12 @@ enum duz2{
     dva = 6,    
     //% block="8"
     tri = 8
+    //% block="10
+    cet
+    //% block="12
+    pet 8
+    //% block="15
+    ses 8    
 }
 
 //% blockHidden=true
